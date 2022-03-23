@@ -1,3 +1,55 @@
 body {
     padding-top: 5rem;
+    background-color: rgb(240, 240, 240);
+}
+h2{
+    font-weight: 700;
+    margin:20px;
+    margin-left: 0px;
+}
+
+form{
+    background-color: white;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 60%;
+    height: fit-content;
+    
+}
+em{
+    font-weight: 600;
+}
+
+.form-group{
+    margin-top: 10px;
+    
+}
+
+.form-group .form-control{
+    width: 45%;
+}
+.form-group #title{
+    width: 100% !important;
+}
+.form-group #textarea{
+    width: 100% !important;
+}
+
+#split{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#split .form-group{
+    flex: 50%;
+    
+}
+#split .form-control{
+    width: 90%;
+    
+}
+
+button{
+    margin-top: 20px;
 }

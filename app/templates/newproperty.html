@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{%block main%}
+    <h2>Add New Property</h2>
+
+    {%include "flash_messages.html"%}
+
+    <div id="container form">
+        <form action="{{url_for('create')}}" method="post" enctype="multipart/form-data">
+            
+            {{form.csrf_token}}
+
+            <div class="form-group">
+                <em>{{form.proptitle.label}}</em> 
+                {{form.proptitle(class="form-control",id="title")}}
+            </div>
+            <div class="form-group">
+                <em>{{form.desc.label}}</em> 
+                {{form.desc(class="form-control",id="textarea")}}
+            </div>
+            <div id="split">
+                <div class="form-group">
+                    <em>{{form.num_of_bedrooms.label}}</em> 
+                    {{form.num_of_bedrooms(class="form-control", id="rooms")}}
+                </div>
+                <div class="form-group">
+                    <em>{{form.num_of_bathrooms.label}}</em> 
+                    {{form.num_of_bathrooms(class="form-control", id="bathrooms")}}
+                </div>
+                <div class="form-group">
+                    <em>{{form.price.label}}</em> 
+                    {{form.price(class="form-control", id="price")}}
+                </div>
+                <div class="form-group">
+                    <em>{{form.proptype.label}}</em> 
+                    {{form.proptype(class="form-control", id="types")}}
+                </div>
+            </div>
+            <div class="form-group">
+                <em>{{form.location.label}}</em> 
+                {{form.location(class="form-control", id="location")}}
+            </div>
+            <div class="form-group">
+                <em>{{form.photo.label}}</em> 
+                {{form.photo(class="form-control", id="filefield")}}
+            </div>
+
+            <button id="createnewbtn" type="submit" class="btn btn-primary">Add Propety</button>
+
+        </div>
+{%endblock%}
